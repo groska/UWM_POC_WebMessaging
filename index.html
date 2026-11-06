@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="UWM-Sandbox Genesys Cloud Web Messaging POC demo site">
+  <title>UWM_POC_WebMessaging Broker Support | Genesys POC Demo</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="demo-banner">POC DEMO ENVIRONMENT — UWM-Sandbox / Genesys Cloud</div>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="Demo home"><span class="brand-mark">UWM_POC_WebMessaging</span><span class="brand-sub">Broker Support</span></a>
+      <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+      <nav class="nav-links">
+        <a href="#services">Loan Services</a><a href="#tools">Broker Tools</a><a href="#support">Support</a><a href="#journey">Customer Journey</a>
+        <a class="btn btn-small" href="#support">Get Help</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <img class="hero-img" src="https://images.contentstack.io/v3/assets/blt5816d0187d3ad42c/bltb97f445e71245e75/67b89e971a86fc76aa6590c0/Home-Hero.jpg" alt="Family entering a home">
+      <div class="hero-overlay"><div class="container"><p class="eyebrow">Wholesale Mortgage Broker Support</p><h1>Leading the Way in Home Loans</h1><p>Fast answers for loan status, underwriting, closing, submissions and broker support.</p><a class="btn" href="#support">Contact Broker Support</a></div></div>
+    </section>
+
+    <section class="intro"><div class="container"><h2>Partner support built around your loan pipeline</h2><p>This demo portal is designed for the UWM-Sandbox Genesys Cloud POC. Use it to demonstrate Web Messaging, a Digital Bot, Knowledge, contextual routing, agent transfer, screen pop and customer journey.</p></div></section>
+
+    <section id="services" class="section"><div class="container"><div class="section-head"><span class="eyebrow dark">Broker Services</span><h2>How can we help today?</h2></div>
+      <div class="cards four">
+        <article class="card blue"><div class="icon">⌕</div><h3>Loan Status</h3><p>Check milestones, outstanding items and current loan progress.</p><a href="#support" data-reason="Loan Status">Get loan help →</a></article>
+        <article class="card green"><div class="icon">✓</div><h3>Underwriting</h3><p>Get support with conditions, documentation and underwriting questions.</p><a href="#support" data-reason="Underwriting">Ask underwriting →</a></article>
+        <article class="card mint"><div class="icon">⌂</div><h3>Closing</h3><p>Get assistance with closing readiness, timing and final loan requirements.</p><a href="#support" data-reason="Closing">Get closing help →</a></article>
+        <article class="card orange"><div class="icon">?</div><h3>Broker Support</h3><p>Questions about submissions, tools, documents or another broker need.</p><a href="#support" data-reason="Broker Support">Contact support →</a></article>
+      </div>
+    </div></section>
+
+    <section id="tools" class="section light"><div class="container"><div class="section-head"><span class="eyebrow dark">Tools That Empower You</span><h2>Designed for a faster broker experience</h2></div>
+      <div class="feature-grid"><div class="feature-menu">
+        <button class="feature-tab active" data-tab="status">Loan Status <small>Visibility</small></button>
+        <button class="feature-tab" data-tab="knowledge">Knowledge Support <small>Self-service</small></button>
+        <button class="feature-tab" data-tab="routing">Smart Routing <small>Genesys Cloud</small></button>
+        <button class="feature-tab" data-tab="agent">Agent Assistance <small>Context</small></button>
+      </div><div class="feature-panel" id="feature-panel"><h3>Loan Status Visibility</h3><p>Give brokers a simple starting point for status questions and route unresolved requests to the dedicated Loan Status queue.</p><span class="queue">UWM_POC_LoanStatus</span></div></div>
+    </div></section>
+
+    <section class="section"><div class="container"><div class="section-head"><span class="eyebrow dark">Advantages That Benefit You</span><h2>From self-service to the right specialist</h2></div>
+      <div class="split"><div><img src="https://res.cloudinary.com/uwm/image/upload/v1763666843/UWM.com/Images/Misc/uwm-home-image1.png" alt="Mortgage support specialist"></div><div class="split-copy"><h3>Start with digital self-service</h3><ul><li>Collect broker contact information</li><li>Capture loan number and contact reason</li><li>Search mortgage knowledge before escalation</li></ul></div></div>
+      <div class="split reverse"><div><img src="https://res.cloudinary.com/uwm/image/upload/v1763666842/UWM.com/Images/Misc/uwm-home-image2.png" alt="Mortgage team"></div><div class="split-copy"><h3>Route with context</h3><ul><li>Bot determines the routing outcome</li><li>Transfer to the appropriate POC queue</li><li>Present collected information to the agent</li></ul></div></div>
+    </div></section>
+
+    <section id="journey" class="section journey"><div class="container"><div class="section-head"><span class="eyebrow dark">Customer Journey Demo</span><h2>Generate meaningful website activity before starting a conversation</h2><p>Navigate these demo actions first, then open Web Messaging. This gives you a simple story for demonstrating page context and prior digital activity.</p></div>
+      <div class="journey-actions"><button data-event="Viewed Loan Status">View Loan Status</button><button data-event="Viewed Underwriting">Explore Underwriting</button><button data-event="Viewed Closing">Review Closing</button><button data-event="Viewed Broker Support">Open Support</button></div>
+      <div class="activity"><strong>Demo activity:</strong> <span id="activity-log">No activity recorded yet.</span></div>
+    </div></section>
+
+    <section id="support" class="section support"><div class="container support-grid"><div><span class="eyebrow">UWM_POC_WebMessaging Broker Support</span><h2>Need help with a loan?</h2><p>Use the Genesys Messenger launcher in the lower-right corner to start the POC conversation.</p><div class="route-list"><span>Loan Status → UWM_POC_LoanStatus</span><span>Underwriting → UWM_POC_Underwriting</span><span>Closing → UWM_POC_Closing</span><span>Other → UWM_POC_Broker_Support</span></div></div><div class="demo-card"><span>GENESYS CLOUD POC</span><h3>What to demonstrate</h3><ol><li>Open Messenger</li><li>Complete customer information</li><li>Ask a mortgage question</li><li>Provide a demo loan number</li><li>Escalate to an agent</li><li>Verify routing and screen pop</li></ol></div></div></section>
+  </main>
+
+  <footer><div class="gradient"></div><div class="container footer-grid"><div><div class="brand-mark footer-logo">UWM_POC_WebMessaging</div><p>UWM-Sandbox Genesys Cloud demonstration site.</p></div><div><strong>POC Assets</strong><p>UWM_POC_MortgageAssistant_Bot<br>UWM_POC_Mortgage_KB<br>UWM-Sandbox</p></div><div><strong>Important</strong><p>This is a demonstration site only. Do not enter real borrower, loan, financial or personal information.</p></div></div><div class="container copyright">POC / Demo Environment — UWM_POC_WebMessaging — demonstration website only.</div></footer>
+
+  <script src="js/app.js"></script>
+
+  <!-- Genesys Cloud Web Messaging - UWM_POC_WebMessaging -->
+  <script type="text/javascript" charset="utf-8">
+    (function (g, e, n, es, ys) {
+      g['_genesysJs'] = e;
+      g[e] = g[e] || function () {
+        (g[e].q = g[e].q || []).push(arguments)
+      };
+      g[e].t = 1 * new Date();
+      g[e].c = es;
+      ys = document.createElement('script'); ys.async = 1; ys.src = n; ys.charset = 'utf-8'; document.head.appendChild(ys);
+    })(window, 'Genesys', 'https://apps.usw2.pure.cloud/genesys-bootstrap/genesys.min.js', {
+      environment: 'prod-usw2',
+      deploymentId: 'fa32ba1b-ca7b-434b-a411-f65bb1083bc6'
+    });
+  </script>
+
+</body>
+</html>
